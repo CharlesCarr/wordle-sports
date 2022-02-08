@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Replacement for the API - pasting this from sportsTeams js file
       // teamsArr is all of the big four sports team names with seven letters 
-      const teamsArr = ['Angels', 'Astros', 'Braves', 'Brewer', 'Dodger', 'Giants', 'Indian', 'Marlin', 'Oriole', 'Padres', 'Pirate', 'Ranger', 'RedSox', 'Rockie', 'Royals', 'Tigers', 'Yankee', 'Bengal', 'Bronco', 'Browns', 'Chiefs', 'Cowboy', 'Eagles', 'Falcon', 'Giants', 'Packer', 'Raider', 'Ravens', 'Saints', 'Texans', 'Titans', 'Viking', 'Celtic', 'Hornet', 'Knicks', 'Lakers', 'Nugget', 'Pacers', 'Piston', 'Raptor', 'Rocket', 'Wizard', 'Coyote', 'Bruins', 'Sabres', 'Flames', 'Oilers', 'Devils', 'Ranger', 'Flyers', 'Sharks', 'Kraken', 'Canuck', 'Knight'];
+      const teamsArr = ['Sixers', 'Niners', 'Angels', 'Astros', 'Braves', 'Brewer', 'Dodger', 'Giants', 'Indian', 'Marlin', 'Oriole', 'Padres', 'Pirate', 'Ranger', 'RedSox', 'Rockie', 'Royals', 'Tigers', 'Yankee', 'Bengal', 'Bronco', 'Browns', 'Chiefs', 'Cowboy', 'Eagles', 'Falcon', 'Giants', 'Packer', 'Raider', 'Ravens', 'Saints', 'Texans', 'Titans', 'Viking', 'Celtic', 'Hornet', 'Knicks', 'Lakers', 'Nugget', 'Pacers', 'Piston', 'Raptor', 'Rocket', 'Wizard', 'Coyote', 'Bruins', 'Sabres', 'Flames', 'Oilers', 'Devils', 'Ranger', 'Flyers', 'Sharks', 'Kraken', 'Canuck', 'Knight'];
       const lowerTeams = teamsArr.map(element => {
         return element.toLowerCase();
       });
-      word = lowerTeams[Math.floor(Math.random() * 54)];
+      word = lowerTeams[Math.floor(Math.random() * 56)];
 
 
       console.log(word);
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // keyboard letter with that letter now has new background color - dark gray
         for (l = 0; l < keyboardLettersArr.length; l++) {
           if (keyboardLettersArr[l].innerHTML === letter) {
-            keyboardLettersArr[l].style.backgroundColor = 'white';
+            keyboardLettersArr[l].style.backgroundColor = '#181818';
           }
         }
         //   returning the gray color
@@ -131,13 +131,23 @@ document.addEventListener("DOMContentLoaded", () => {
     //   if the current word array length is not equal to 5 (not a full word)
       if (currentWordArr.length !== 6) {
         //   alerting the user that it must be 5 letters to submit a guessed word
-        window.alert("Team name must be 6 letters");
+        // window.alert("Team name must be 6 letters");
 
         // in wordle app there is a small overlay container in the middle of the current guess location
         // it appears and then disappears on its own
+        let overlay = document.getElementById('overlay');
+        let cardHeader = document.getElementById('card-header');
+        let cardTextOne = document.getElementById('card-text-one');
+        let cardTextTwo = document.getElementById('card-text-two');
+        let cardTextThree = document.getElementById('card-text-three');
+        let cardBtn = document.getElementById('overlay-btn');
 
-
-
+        overlay.style.display = 'flex';
+        cardHeader.innerHTML = 'Alert';
+        cardTextOne.innerHTML = 'Team name must be 6 letters';
+        cardTextTwo.innerHTML = '';
+        cardTextThree.innerHTML = '';
+        cardBtn.innerHTML = 'Continue';
 
       // }else if (!lowerTeams.includes(currentWord)) {
       //   console.log(lowerTeams);
@@ -157,8 +167,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
       
   
-    //   turns the array into a string
-      // const currentWord = currentWordArr.join("");
+        if (!lowerTeams.includes(currentWord)) {
+          let overlay = document.getElementById('overlay');
+          let cardHeader = document.getElementById('card-header');
+          let cardTextOne = document.getElementById('card-text-one');
+          let cardTextTwo = document.getElementById('card-text-two');
+          let cardTextThree = document.getElementById('card-text-three');
+          let cardBtn = document.getElementById('overlay-btn');
+
+          overlay.style.display = 'flex';
+          cardHeader.innerHTML = 'Alert';
+          cardTextOne.innerHTML = 'Team name is not recognized!';
+          cardTextTwo.innerHTML = '';
+          cardTextThree.innerHTML = '';
+          cardBtn.innerHTML = 'Continue';
+
+
+
+
+        } else {
+
+       
   
 
 
@@ -307,7 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
 */
 
         }
-
+      }
         /* 
         })
 

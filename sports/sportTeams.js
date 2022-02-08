@@ -197,6 +197,10 @@ const combineSports = () => {
     allSportsArray.push(...nba);
     allSportsArray.push(...nhl);
 
+    // manually adding
+    allSportsArray.push('Sixers');
+    allSportsArray.push('Niners');
+
     console.log(allSportsArray);
 }
 
