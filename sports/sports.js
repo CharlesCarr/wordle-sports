@@ -1,0 +1,3 @@
+const teamArr = ['Angels', 'Astros', 'Braves', 'Brewer', 'Dodger', 'Giants', 'Indian', 'Marlin', 'Oriole', 'Padres', 'Pirate', 'Ranger', 'RedSox', 'Rockie', 'Royals', 'Tigers', 'Yankee', 'Bengal', 'Bronco', 'Browns', 'Chiefs', 'Cowboy', 'Eagles', 'Falcon', 'Giants', 'Packer', 'Raider', 'Ravens', 'Saints', 'Texans', 'Titans', 'Viking', 'Celtic', 'Hornet', 'Knicks', 'Lakers', 'Nugget', 'Pacers', 'Piston', 'Raptor', 'Rocket', 'Wizard', 'Coyote', 'Bruins', 'Sabres', 'Flames', 'Oilers', 'Devils', 'Ranger', 'Flyers', 'Sharks', 'Kraken', 'Canuck', 'Knight'];
+
+console.log(teamArr.length);
