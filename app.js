@@ -133,6 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
         //   alerting the user that it must be 5 letters to submit a guessed word
         window.alert("Team name must be 6 letters");
 
+        // in wordle app there is a small overlay container in the middle of the current guess location
+        // it appears and then disappears on its own
+
 
 
 
@@ -193,13 +196,52 @@ document.addEventListener("DOMContentLoaded", () => {
         //  if the current word is the correct word 
           if (currentWord === word) {
             //   alert the user that they have guessed correctly
-            window.alert("Congratulations!");
+            // window.alert("Congratulations!");
+            // instead of window.alert want to have another overlay instead
+            // maybe I could create this all in a separate function and just call that function
+            let overlay = document.getElementById('overlay');
+            let cardHeader = document.getElementById('card-header');
+            let cardTextOne = document.getElementById('card-text-one');
+            let cardTextTwo = document.getElementById('card-text-two');
+            let cardTextThree = document.getElementById('card-text-three');
+            // capitalizing first letter of word 
+            let capWord = word.charAt(0).toUpperCase() + word.slice(1);
+            let cardBtn = document.getElementById('overlay-btn');
+
+
+            overlay.style.display = 'flex';
+            cardHeader.innerHTML = 'Congratulations!';
+            cardTextOne.innerHTML = `${capWord} is the correct team name!`;
+            cardTextTwo.innerHTML = '';
+            cardTextThree.innerHTML = '';
+            // will then also need to add a click event to reload the page to 'Play Again'
+            cardBtn.addEventListener("click", reload);
+
           }
   
         //   if the guessedWords array is 6 (they have run out of guesses) and the word is not correct
           if (guessedWords.length === 5 && currentWord !== word) {
             //   alert the user that they have no more guesses and tells them the correct word
-            window.alert(`Sorry, you have no more guesses! The word is ${word}.`);
+            // window.alert(`Sorry, you have no more guesses! The word is ${word}.`);
+
+
+            let overlay = document.getElementById('overlay');
+            let cardHeader = document.getElementById('card-header');
+            let cardTextOne = document.getElementById('card-text-one');
+            let cardTextTwo = document.getElementById('card-text-two');
+            let cardTextThree = document.getElementById('card-text-three');
+            // capitalizing first letter of word 
+            let capWord = word.charAt(0).toUpperCase() + word.slice(1);
+            let cardBtn = document.getElementById('overlay-btn');
+
+
+            overlay.style.display = 'flex';
+            cardHeader.innerHTML = 'Sorry, you have no more guesses!';
+            cardTextOne.innerHTML = `${capWord} is the correct team name!`;
+            cardTextTwo.innerHTML = '';
+            cardTextThree.innerHTML = '';
+            // will then also need to add a click event to reload the page to 'Play Again'
+            cardBtn.addEventListener("click", reload);
           }
   
           guessedWords.push([]);
@@ -321,9 +363,9 @@ document.addEventListener("DOMContentLoaded", () => {
       availableSpace = availableSpace - 1;
     }
 
-    // function updateKeyboardGuesses() {
-
-    // }
+    function reload() {
+      location.reload();
+    }
   
     // for loop for the keys
     for (let i = 0; i < keys.length; i++) {
