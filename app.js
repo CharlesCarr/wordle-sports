@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let cardBtn = document.getElementById('overlay-btn');
 
         overlay.style.display = 'flex';
-        cardHeader.innerHTML = 'Alert';
+        cardHeader.innerHTML = 'ALERT';
         cardTextOne.innerHTML = 'Team name must be 6 letters';
         cardTextTwo.innerHTML = '';
         cardTextThree.innerHTML = '';
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
           let cardBtn = document.getElementById('overlay-btn');
 
           overlay.style.display = 'flex';
-          cardHeader.innerHTML = 'Alert';
+          cardHeader.innerHTML = 'ALERT';
           cardTextOne.innerHTML = 'Team name is not recognized!';
           cardTextTwo.innerHTML = '';
           cardTextThree.innerHTML = '';
