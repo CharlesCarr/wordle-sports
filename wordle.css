@@ -6,6 +6,7 @@
   html,
   body {
     height: 100%;
+    /* width: 100%; */
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
@@ -14,9 +15,9 @@
     display: flex;
     background-color: black;
     height: 100%;
+    /* width: 100%; */
     align-items: center;
     flex-direction: column;
-    
   }
   
   #game {
@@ -119,37 +120,33 @@
 
   .logo-container {
     width: 300px;
-    height: 240px;
+    height: 220px;
     background-color: gainsboro;
     border-radius: 10px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
 
+    position: absolute;
   }
 
   #nfl-teams {
-    position: absolute;
     top: 3%;
     right: 3%;
   }
 
   #nba-teams {
-    position: absolute;
     top: 3%;
     left: 3%;
   }
 
   #mlb-teams {
-    position: absolute;
     bottom: 3%;
     right: 3%;
   }
 
   #nhl-teams {
-    position: absolute;
     bottom: 3%;
     left: 3%;
   }
@@ -172,7 +169,7 @@
     align-items: center;
   }
 
-  #text-container {
+  /* #text-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -189,12 +186,67 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-  }
+  } */
   
-  .text {
+  /* .text {
     text-align: center;
     font-size: 16px;
     color: white;
+  } */
+
+  .card-body {
+    padding: 2% 4%;
   }
+
+  #overlay-btn {
+    margin-top: 1%;
+  }
+
+@media only screen and (max-width: 1180px) {
+
+  .logo-container {
+    width: 200px;
+    height: 145px;
+  }
+
+  .team-logos {
+    width: 180px;
+    height: 130px;
+  }
+
+}
+
+/* Actually want to have this later so will lower 1180 to something else */
+@media only screen and (max-width: 1000px) {
+
+  /* body {
+    height: auto;
+  } */
+
+  * {
+    background-color: black;
+  }
+
+  /* #container {
+    width: 100%;
+  } */
+
+  .logo-container {
+    position: static;
+    margin-top: 5%;
+    
+  }
+
+  #teams-container {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 220px 220px;
+  }
+
+  .card-text {
+    color: white;
+  }
+
+}
 
   

@@ -15,83 +15,89 @@
     <title>Wordle Sports Teams!</title>
   </head>
   <body>
-    <div id="overlay">
-      <div class="card text-center w-50">
-        <h1 id='card-header' class="card-header">Welcome to Wordle Sports Teams!</h1>
-        <div class="card-body">
-          <p id='card-text-one' class="card-text">Rules are the same as the original wordle app but the word bank is from all four major professional sports leagues in the US (NFL, NBA, MLB, NHL).</p>
-          <p id='card-text-two' class="card-text">Instead of guessing words with 5 letters, each word is 6 letters and you have 5 rounds of guesses.</p>
-          <p id='card-text-three' class="card-text">Hint: Both singular and plural versions of team names are possible dependent on the word fitting to 6 letters. Ex) Bulldog/Bulldogs</p>
-          <button id="overlay-btn" type="button" class="btn btn-secondary btn-lg">Play New Game!</button>
-        </div>
-      </div>
-    </div>
-
     <div id="container">
-      <div id="nfl-teams" class="logo-container">
-        <img class="team-logos" src="./images/nfl-logos.jpeg" alt="nfl-logos">
-      </div>
 
-      <div id="nba-teams" class="logo-container">
-        <img class="team-logos" src="./images/nba-logos.jpeg" alt="nba-logos">
+      <div id="overlay">
+        <div class="card text-center w-75">
+          <h1 id='card-header' class="card-header">Welcome to Wordle Sports Teams!</h1>
+          <div class="card-body">
+            <p id='card-text-one' class="card-text">Rules are the same as the original wordle app but the word bank is from all four major professional sports leagues in the US (NFL, NBA, MLB, NHL).</p>
+            <p id='card-text-two' class="card-text">Instead of guessing words with 5 letters, each word is 6 letters and you have 5 rounds of guesses.</p>
+            <p id='card-text-three' class="card-text">( <em>Hint: Both singular and plural versions of team names are possible dependent on the word fitting to 6 letters. Ex) Bulldog/Bulldogs</em> )</p>
+            <button id="overlay-btn" type="button" class="btn btn-secondary btn-lg">Play New Game!</button>
+          </div>
+        </div>
       </div>
-
-      <div id="mlb-teams" class="logo-container">
-        <img class="team-logos" src="./images/mlb-logos.jpeg" alt="mlb-logos">
-      </div>
-
-      <div id="nhl-teams" class="logo-container">
-        <img class="team-logos" src="./images/nhl-logos.jpeg" alt="nhl-logos">
-      </div>
-
+  
       <div id="game">
-        <header>
-          <h1 class="title">WORDLE SPORTS TEAMS</h1>
-        </header>
-
-        <div id="board-container">
-          <div id="board"></div>
-        </div>
-
-        <div id="keyboard-container">
-          <div class="keyboard-row">
-            <button data-key="q" id="q" class="letter-key">q</button>
-            <button data-key="w" class="letter-key">w</button>
-            <button data-key="e" class="letter-key">e</button>
-            <button data-key="r" class="letter-key">r</button>
-            <button data-key="t" class="letter-key">t</button>
-            <button data-key="y" class="letter-key">y</button>
-            <button data-key="u" class="letter-key">u</button>
-            <button data-key="i" class="letter-key">i</button>
-            <button data-key="o" class="letter-key">o</button>
-            <button data-key="p" class="letter-key">p</button>
+          <header>
+            <h1 class="title">WORDLE SPORTS TEAMS</h1>
+          </header>
+  
+          <div id="board-container">
+            <div id="board"></div>
           </div>
-          <div class="keyboard-row">
-            <div class="spacer-half"></div>
-            <button data-key="a" class="letter-key">a</button>
-            <button data-key="s" class="letter-key">s</button>
-            <button data-key="d" class="letter-key">d</button>
-            <button data-key="f" class="letter-key">f</button>
-            <button data-key="g" class="letter-key">g</button>
-            <button data-key="h" class="letter-key">h</button>
-            <button data-key="j" class="letter-key">j</button>
-            <button data-key="k" class="letter-key">k</button>
-            <button data-key="l" class="letter-key">l</button>
-            <div class="spacer-half"></div>
+  
+          <div id="keyboard-container">
+            <div class="keyboard-row">
+              <button data-key="q" id="q" class="letter-key">q</button>
+              <button data-key="w" class="letter-key">w</button>
+              <button data-key="e" class="letter-key">e</button>
+              <button data-key="r" class="letter-key">r</button>
+              <button data-key="t" class="letter-key">t</button>
+              <button data-key="y" class="letter-key">y</button>
+              <button data-key="u" class="letter-key">u</button>
+              <button data-key="i" class="letter-key">i</button>
+              <button data-key="o" class="letter-key">o</button>
+              <button data-key="p" class="letter-key">p</button>
+            </div>
+            <div class="keyboard-row">
+              <div class="spacer-half"></div>
+              <button data-key="a" class="letter-key">a</button>
+              <button data-key="s" class="letter-key">s</button>
+              <button data-key="d" class="letter-key">d</button>
+              <button data-key="f" class="letter-key">f</button>
+              <button data-key="g" class="letter-key">g</button>
+              <button data-key="h" class="letter-key">h</button>
+              <button data-key="j" class="letter-key">j</button>
+              <button data-key="k" class="letter-key">k</button>
+              <button data-key="l" class="letter-key">l</button>
+              <div class="spacer-half"></div>
+            </div>
+            <div class="keyboard-row">
+              <button data-key="enter" class="wide-button">Enter</button>
+              <button data-key="z" class="letter-key">z</button>
+              <button data-key="x" class="letter-key">x</button>
+              <button data-key="c" class="letter-key">c</button>
+              <button data-key="v" class="letter-key">v</button>
+              <button data-key="b" class="letter-key">b</button>
+              <button data-key="n" class="letter-key">n</button>
+              <button data-key="m" class="letter-key">m</button>
+              <button data-key="del" class="wide-button">Del</button>
+            </div>
           </div>
-          <div class="keyboard-row">
-            <button data-key="enter" class="wide-button">Enter</button>
-            <button data-key="z" class="letter-key">z</button>
-            <button data-key="x" class="letter-key">x</button>
-            <button data-key="c" class="letter-key">c</button>
-            <button data-key="v" class="letter-key">v</button>
-            <button data-key="b" class="letter-key">b</button>
-            <button data-key="n" class="letter-key">n</button>
-            <button data-key="m" class="letter-key">m</button>
-            <button data-key="del" class="wide-button">Del</button>
-          </div>
-        </div>
       </div>
+  
+      <div id="teams-container">
+          <div id="nfl-teams" class="logo-container">
+            <img class="team-logos" src="./images/nfl-logos.jpeg" alt="nfl-logos">
+          </div>
+    
+          <div id="nba-teams" class="logo-container">
+            <img class="team-logos" src="./images/nba-logos.jpeg" alt="nba-logos">
+          </div>
+    
+          <div id="mlb-teams" class="logo-container">
+            <img class="team-logos" src="./images/mlb-logos.jpeg" alt="mlb-logos">
+          </div>
+    
+          <div id="nhl-teams" class="logo-container">
+            <img class="team-logos" src="./images/nhl-logos.jpeg" alt="nhl-logos">
+          </div>
+  
+      </div>
+  
+
     </div>
-  </body>
+      </body>
 </html>
