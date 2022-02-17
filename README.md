@@ -1,7 +1,5 @@
 # Wordle Sports Web App
 
-(** Update URL for GH Pages after hosting **)
-
 A sports themed Wordle web app clone built with HTML, CSS3, and Vanilla JavaScript
 
 ## Project Description
@@ -29,7 +27,7 @@ There are a few bugs that I am aware of and may go back and fix sometime soon. (
 
 Hosted with GitHub Pages
 
-Link: [Wordle Sports Web App](https://charlescarr.github.io/personal-portfolio-website/)
+Link: [Wordle Sports Web App](https://charlescarr.github.io/wordle-sports/)
 
 #### Disclaimer
 
