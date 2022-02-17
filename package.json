@@ -1,0 +1,23 @@
+{
+  "name": "wordle-clone",
+  "version": "1.0.0",
+  "description": "A sports themed Wordle web app clone built with HTML, CSS3, and Vanilla JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesCarr/wordle-sports.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlesCarr/wordle-sports/issues"
+  },
+  "homepage": "https://charlescarr.github.io/wordle-sports/",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
