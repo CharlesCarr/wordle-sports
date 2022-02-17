@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#container {
+  display: flex;
+  background-color: black;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+#game {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-bottom: 1px solid rgb(58, 58, 60);
+}
+
+.title {
+  color: gainsboro;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.4rem 0 0.4rem 0;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.square {
+  border: 2px solid rgb(58, 58, 60);
+  min-width: 50px;
+  min-height: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: gainsboro;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keyboard-container {
+  height: 200px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+
+.keyboard-row button {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  height: 58px;
+  cursor: pointer;
+  background-color: rgb(129, 131, 132);
+  color: rgb(215, 218, 220);
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-right: 6px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.keyboard-row button.wide-button {
+  flex-grow: 1.5;
+}
+
+.spacer-half {
+  flex-grow: 0.5;
+}
+
+/* Additions */
+.team-logos {
+  width: 275px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.logo-container {
+  width: 300px;
+  height: 220px;
+  background-color: gainsboro;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+}
+
+#nfl-teams {
+  top: 3%;
+  right: 3%;
+}
+
+#nba-teams {
+  top: 3%;
+  left: 3%;
+}
+
+#mlb-teams {
+  bottom: 3%;
+  right: 3%;
+}
+
+#nhl-teams {
+  bottom: 3%;
+  left: 3%;
+}
+
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  padding: 2% 4%;
+}
+
+#overlay-btn {
+  margin-top: 1%;
+}
+
+@media only screen and (max-width: 1180px) {
+  .logo-container {
+    width: 200px;
+    height: 145px;
+  }
+
+  .team-logos {
+    width: 180px;
+    height: 130px;
+  }
+}
+
+/* Actually want to have this later so will lower 1180 to something else */
+@media only screen and (max-width: 1000px) {
+  * {
+    background-color: black;
+  }
+
+  .logo-container {
+    position: static;
+    margin-top: 5%;
+  }
+
+  #teams-container {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 220px 220px;
+  }
+
+  .card-text {
+    color: white;
+  }
+}
