@@ -27,7 +27,7 @@ There are a few bugs that I am aware of and may go back and fix sometime soon. (
 
 Hosted with GitHub Pages
 
-Link: [Wordle Sports Web App](https://charlescarr.github.io/wordle-sports/)
+Link: [Wordle Sports Web App](https://charlescarr.github.io/wordle-sports/wordle-sports/index.html)
 
 #### Disclaimer
 
